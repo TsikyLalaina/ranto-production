@@ -1,0 +1,23 @@
+{
+  "name": "ranto-development",
+  "version": "1.0.0",
+  "description": "Ranto - Madagascar Business Networking Platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@types/express": "^5.1.0",
+    "firebase-admin": "^13.4.0"
+  },
+  "keywords": [
+    "madagascar",
+    "entrepreneurship",
+    "business",
+    "networking",
+    "opportunities"
+  ],
+  "author": "Ranto Team",
+  "license": "MIT"
+}
