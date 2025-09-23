@@ -1,23 +1,27 @@
-
-### 5. Package Configuration Files
-
-#### `packages\database\package.json`
-```json
 {
-  "name": "@miharina/database",
+  "name": "@ranto/database",
   "version": "1.0.0",
-  "description": "Miharina database schemas and migrations",
+  "description": "Ranto database schemas and migrations",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "migrate": "node migrations/migrate.js",
     "seed": "node migrations/seed.js",
     "reset": "node migrations/reset.js"
   },
   "dependencies": {
-    "pg": "^8.11.0",
+    "pg": "^8.16.3",
     "@databases/pg": "^5.4.1"
   },
   "devDependencies": {
-    "@types/pg": "^8.10.0"
-  }
+    "@types/pg": "^8.15.5"
+  },
+  "keywords": [
+    "database",
+    "postgresql",
+    "migrations",
+    "madagascar"
+  ],
+  "author": "Ranto Team",
+  "license": "MIT"
 }

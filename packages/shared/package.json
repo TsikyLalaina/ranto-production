@@ -1,0 +1,25 @@
+{
+  "name": "@ranto/shared",
+  "version": "1.0.0",
+  "description": "Ranto shared utilities and types",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "rimraf": "^3.0.2"
+  },
+  "keywords": [
+    "shared",
+    "utilities",
+    "types",
+    "madagascar"
+  ],
+  "author": "Ranto Team",
+  "license": "MIT"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@ranto/ai-service",
+  "version": "1.0.0",
+  "description": "Ranto AI Service - Placeholder for future n8n workflow automation",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"AI Service placeholder - n8n integration coming soon\"",
+    "build": "echo \"Build not implemented yet\"",
+    "start": "echo \"Start not implemented yet\""
+  },
+  "keywords": [
+    "ai",
+    "automation",
+    "n8n",
+    "workflows",
+    "madagascar"
+  ],
+  "author": "Ranto Team",
+  "license": "MIT"
+}
