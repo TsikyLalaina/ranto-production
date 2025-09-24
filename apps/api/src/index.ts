@@ -70,7 +70,7 @@ class RantoServer {
         error_fr: 'Trop de requêtes, veuillez réessayer plus tard',
         error_mg: 'Fangatahana be loatra, andramo indray rehefa afaka kelikeliny'
       },
-      keyGenerator: (req: express.Request, _res: express.Response): string => {
+      keyGenerator: (req, _res) => {
         const auth = req.headers['authorization'];
         if (typeof auth === 'string' && auth.trim().length > 0) {
           return auth;
@@ -81,10 +81,10 @@ class RantoServer {
       // Skip rate limiting for health checks and CORS preflights
       skip: (req) => req.path === '/health' || req.method === 'OPTIONS'
     });
-    this.app.use(limiter);
+    this.app.use(limiter as any);
 
     // Body parsing with larger limits for file uploads
-    this.app.use(compression());
+    this.app.use(compression() as any);
     this.app.use(express.json({ limit: '10mb' }));
     this.app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 

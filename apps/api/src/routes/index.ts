@@ -96,7 +96,7 @@ router.delete('/opportunities/:id', authenticateToken as RequestHandler, opportu
 router.get('/opportunities/user/me', authenticateToken as RequestHandler, opportunityController.getMyOpportunities.bind(opportunityController) as RequestHandler);
 
 // Upload routes
-router.post('/upload', authenticateToken as RequestHandler, upload.single('file'), uploadController.uploadFile.bind(uploadController) as RequestHandler);
+router.post('/upload', authenticateToken as RequestHandler, upload.single('file') as any, uploadController.uploadFile.bind(uploadController) as RequestHandler);
 router.get('/uploads', authenticateToken as RequestHandler, uploadController.getUploads.bind(uploadController) as RequestHandler);
 router.delete('/uploads/:id', authenticateToken as RequestHandler, uploadController.deleteUpload.bind(uploadController) as RequestHandler);
 

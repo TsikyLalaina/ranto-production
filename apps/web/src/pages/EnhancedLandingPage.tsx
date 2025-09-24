@@ -207,13 +207,14 @@ const EnhancedLandingPage = () => {
                 <option>🇬🇧 EN</option>
                 <option>🇲🇬 MG</option>
               </motion.select>
-              <motion.button 
+              <motion.a 
+                href="/login"
                 className="btn-primary liquid-button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Login
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </div>
