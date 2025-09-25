@@ -47,7 +47,8 @@ export const RevenueModel = () => {
   const targets2027 = [
     { metric: "Farmers Served", value: "50,000+", note: "Across SAVA region" },
     { metric: "Export Value", value: "$100M+", note: "Processed through platform" },
-    { metric: "Credit Facilitated", value: "$50M+", note: "Via banking partnerships" }
+    { metric: "Credit Facilitated", value: "$50M+", note: "Via banking partnerships" },
+    { metric: "Exporter Retention", value: "80%", note: "Recurring premium customers" }
   ];
 
   const { ref, isVisible } = useScrollReveal({ threshold: 0.2, rootMargin: "0px 0px -15% 0px" });
@@ -69,7 +70,7 @@ export const RevenueModel = () => {
           {revenueStreams.map((stream, index) => (
             <Card
               key={index}
-              className="glass-panel rounded-3xl border-border/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow reveal-on-scroll reveal-from-bottom"
+              className="glass-panel rounded-3xl border-border/40 transition-all duration-500 hover-float hover:shadow-glow reveal-on-scroll reveal-from-bottom"
               style={{ transitionDelay: `${0.15 + index * 0.12}s` }}
               data-visible={visibility}
             >
@@ -112,9 +113,9 @@ export const RevenueModel = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/45 opacity-70" aria-hidden="true" />
           <div className="relative z-10">
             <h3 className="text-3xl font-semibold mb-10 text-center">2027 Success Targets</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 w-full max-w-6xl mx-auto justify-items-center">
               {targets2027.map((target, index) => (
-                <div key={index} className="text-center space-y-2">
+                <div key={index} className="w-full text-center space-y-2 px-2">
                   <div className="text-2xl font-bold">{target.value}</div>
                   <div className="text-lg font-semibold text-white/90">{target.metric}</div>
                   <div className="text-sm text-white/80">{target.note}</div>
